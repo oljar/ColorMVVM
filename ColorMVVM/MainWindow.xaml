@@ -8,11 +8,13 @@
        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
        mc:Ignorable="d"
        Title="MainWindow" Height="450" Width="800">
-   <Window.DataContext>
-       <mw:EdycjaKoloru/>
-   </Window.DataContext>
-
-   <i:Interaction.Triggers>  <!-- musi być bezpośrednio w znaczniku okna -->
+    <Window.DataContext>
+        <mw:EdycjaKoloru/>
+    </Window.DataContext>
+    <Window.InputBindings>
+        <KeyBinding Key="R" Command="{Binding Resetuj}"/>
+    </Window.InputBindings>
+        <i:Interaction.Triggers>  <!-- musi być bezpośrednio w znaczniku okna -->
        <i:EventTrigger EventName="Closed">
            <i:InvokeCommandAction Command="{Binding Zapisz}"/>
        </i:EventTrigger>
