@@ -113,6 +113,26 @@ namespace ColorMVVM.ModelWidoku
         }
 
 
+        //public void _Zaczytaj()  // normalne wywołanie
+        //{
+        //    model = Ustawienia.Czytaj();
+        //}
+
+        //public ICommand Zaczytaj
+        //{ get
+        //    {  return new RelayCommand((object p)=> { 
+        //        _Zaczytaj(); 
+        //        onPropertyChanged(nameof(B), nameof(G), nameof(R), nameof(Kolor));
+
+        //    });
+        //    }
+        //}
+
+
+
+
+
+
 
         public void _Zapisz()     // normalne wywołanie
         {
