@@ -19,6 +19,10 @@
            <i:InvokeCommandAction Command="{Binding Zapisz}"/>
        </i:EventTrigger>
    </i:Interaction.Triggers>
+
+    <i:Interaction.Behaviors>
+        <local:ZachowaniaPrzyciskZamykającyOkno Klawisz="Esc"/>   <!-- musi być bezpośrednio w znaczniku okna , klawisz zamknięcie okna-->
+    </i:Interaction.Behaviors>
    <DockPanel LastChildFill="True" >
        <Button   DockPanel.Dock="Bottom" Margin="10" Width=" 100" Height ="30" Content="Reset" HorizontalAlignment="Left"
          Command="{Binding Resetuj, Mode=OneWay}"/>
