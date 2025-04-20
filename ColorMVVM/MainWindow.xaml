@@ -21,8 +21,14 @@
    </i:Interaction.Triggers>
 
     <i:Interaction.Behaviors>
-        <local:ZachowaniaPrzyciskZamykającyOkno Klawisz="Esc"/>   <!-- musi być bezpośrednio w znaczniku okna , klawisz zamknięcie okna-->
+        <local:ZamknięcieOknaPrzyciskiem Klawisz="Esc"/>   <!-- musi być bezpośrednio w znaczniku okna , klawisz zamknięcie okna-->
+
+        <local:PrzyciskZamykającyOkno x:Name="przyciskZamykającyOkno" Przycisk="{Binding ElementName=przyciskZamknij}">
+            
+        </local:PrzyciskZamykającyOkno>
     </i:Interaction.Behaviors>
+    
+    
    <DockPanel LastChildFill="True" >
        <Button   DockPanel.Dock="Bottom" Margin="10" Width=" 100" Height ="30" Content="Reset" HorizontalAlignment="Left"
          Command="{Binding Resetuj, Mode=OneWay}"/>
@@ -30,9 +36,11 @@
        <Button   DockPanel.Dock="Bottom" Margin="10" Width=" 100" Height ="30" Content="Czytaj" HorizontalAlignment="Left"
        Command="{Binding Zaczytaj, Mode=OneWay}"/>
 
-       <Button   DockPanel.Dock="Bottom" Margin="10" Width=" 100" Height ="30" Content="Zapisz" HorizontalAlignment="Left"
+        <Button   DockPanel.Dock="Bottom" Margin="10" Width=" 100" Height ="30" Content="Zapisz" HorizontalAlignment="Left"
       Command="{Binding Zapisz, Mode=OneWay}"/>
-
+       
+        <Button x:Name="przyciskZamknij"  DockPanel.Dock="Bottom"  Margin="10" Width=" 100" Content="Zamyknij"  HorizontalAlignment="Left"/>
+       
        <Slider x:Name="sliderB" DockPanel.Dock="Bottom" Margin="10" Maximum="255" 
                Value="{Binding B, Mode=TwoWay}"/>
        <Slider x:Name="sliderG"  DockPanel.Dock="Bottom" Margin="10" Maximum="255"
